@@ -9,11 +9,11 @@ pipeline {
             
             steps {
                 dir ('source') {
-                    sh '''/var/lib/jenkins/maven/bin/mvn -Dmaven.test.failure.ignore=true clean install
+                    sh '''/opt/maven/bin/mvn -Dmaven.test.failure.ignore=true clean install
                           cp -R target/*.war ansible/hello-world.war'''
                 }
                 dir ('source/terraform/dev') {
-                    sh '/usr/local/bin/terraform init && terraform apply -auto-approve'
+                    sh '/temp/terraform init && terraform apply -auto-approve'
                 }
             }
         }
