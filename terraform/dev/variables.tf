@@ -14,7 +14,7 @@ variable "environment" {
 
 #key pair name
 variable "key_name" {
-  default = "formacInclassoregon"
+  default = "formacoregon"
 }
 
 variable "ssh_user" {
