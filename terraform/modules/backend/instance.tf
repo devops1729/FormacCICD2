@@ -15,7 +15,7 @@ resource "aws_instance" "app" {
   }
 
   provisioner "local-exec" {
-    command = "sleep 120; ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u ${var.ssh_user} --private-key ~/.ssh/formaccicd -i '${self.private_ip},' '../../ansible/site.yml'"
+    command = "sleep 120; ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u ${var.ssh_user} --private-key ~/.ssh/formacoregon -i '${self.private_ip},' '../../ansible/site.yml'"
   }
 
   tags = {
