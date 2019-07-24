@@ -13,7 +13,7 @@ pipeline {
                           cp -R target/*.war ansible/hello-world.war'''
                 }
                 dir ('source/terraform/dev') {
-                    sh '/temp/terraform init && terraform destroy -auto-approve'
+                    sh '/temp/terraform init && terraform apply -auto-approve'
                 }
             }
         }
