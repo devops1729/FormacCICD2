@@ -14,7 +14,7 @@ variable "environment" {
 
 #key pair name
 variable "key_name" {
-  default = "formacoregon"
+  default = "formaccicd"
 }
 
 variable "ssh_user" {
