@@ -42,10 +42,10 @@ resource "aws_route_table" "PublicRouteTable" {
     gateway_id = "${aws_internet_gateway.IGW.id}"
   }
 
-  route {
-    cidr_block                = "${var.default_vpc_cidrs}"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.defaultPeering.id}"
-  }
+#  route {
+ #   cidr_block                = "${var.default_vpc_cidrs}"
+#    vpc_peering_connection_id = "${aws_vpc_peering_connection.defaultPeering.id}"
+ # }
 }
 
 resource "aws_route_table_association" "PublicRouteTableAssoc" {
