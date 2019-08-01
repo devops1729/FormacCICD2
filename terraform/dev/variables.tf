@@ -22,7 +22,7 @@ variable "ssh_user" {
 }
 
 variable "vpc_net_block" {
-  default = "10.210"
+  default = "10.220"
 }
 
 #Instance type
